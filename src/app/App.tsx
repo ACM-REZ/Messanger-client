@@ -9,7 +9,7 @@ import GlobalStyle from './GlobalStyle'
 import LoginPage from '../pages/Login/ui/LoginPage'
 import HomePage from '../pages/Home/ui/HomePage'
 import PrivateRoute from '../features/auth/model/PrivateRoute'
-import MainLayout from './layout/mainLayout/Layout'
+import MainLayout from './layout/Layout/Layout'
 
 const App: React.FC = () => {
   const theme = useSelector((state: RootState) => state.theme.theme)
