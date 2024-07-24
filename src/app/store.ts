@@ -1,10 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, Store } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import counterReducer from './counterSlice'
+import themeReducer from '../entities/theme/model/themeSlice'
+import userReducer from '../entities/user/model/userSlice'
 
-export const store = configureStore({
+export const store: Store = configureStore({
   reducer: {
-    counter: counterReducer,
+    theme: themeReducer,
+    user: userReducer,
   },
 })
 
