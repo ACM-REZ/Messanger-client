@@ -1,8 +1,15 @@
 import styled from 'styled-components'
 
+const defaultTransition = `
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+`
+
 export const Header = styled.header`
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.color};
+  ${defaultTransition}
   width: 100%;
   height: 70px;
 `
@@ -15,6 +22,7 @@ export const Main = styled.main`
 export const Footer = styled.footer`
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.color};
+  ${defaultTransition}
   width: 100%;
   height: 70px;
 `
