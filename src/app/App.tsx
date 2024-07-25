@@ -9,18 +9,19 @@ import GlobalStyle from './GlobalStyle'
 import LoginPage from '../pages/Login/ui/LoginPage'
 import HomePage from '../pages/Home/ui/HomePage'
 import PrivateRoute from '../features/auth/model/PrivateRoute'
-import MainLayout from './layout/Layout/Layout'
+import Layout from './layout/Layout'
 
 const App: React.FC = () => {
   const theme = useSelector((state: RootState) => state.theme.theme)
   const currentTheme = theme === 'light' ? lightTheme : darkTheme
+
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyle />
 
       <Router>
         <Routes>
-          <Route element={<MainLayout />}>
+          <Route element={<Layout />}>
             <Route path="/login" element={<LoginPage />} />
             <Route element={<PrivateRoute />}>
               <Route path="/" element={<HomePage />} />

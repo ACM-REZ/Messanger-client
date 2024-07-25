@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-  background-color: ${({ theme }) => theme.color};
-  color: ${({ theme }) => theme.background};
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.color};
   width: 100%;
   height: 70px;
 `
@@ -13,8 +13,8 @@ export const Main = styled.main`
 `
 
 export const Footer = styled.footer`
-  background-color: ${({ theme }) => theme.color};
-  color: ${({ theme }) => theme.background};
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.color};
   width: 100%;
   height: 70px;
 `
