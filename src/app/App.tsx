@@ -21,9 +21,9 @@ const App: React.FC = () => {
 
       <Router>
         <Routes>
-          <Route element={<Layout />}>
-            <Route path="/login" element={<LoginPage />} />
-            <Route element={<PrivateRoute />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route element={<PrivateRoute />}>
+            <Route element={<Layout />}>
               <Route path="/" element={<HomePage />} />
             </Route>
           </Route>

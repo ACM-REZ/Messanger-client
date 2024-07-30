@@ -22,6 +22,25 @@ const GlobalStyle = createGlobalStyle`
     padding: 2rem;
     text-align: center;
   }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  input,
+  button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  button,
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
 `
 
 export default GlobalStyle

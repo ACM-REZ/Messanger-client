@@ -1,4 +1,4 @@
-export interface User {
+export interface IFormInputs {
   username: string
   password: string
 }
