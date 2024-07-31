@@ -1,6 +1,12 @@
 import { forwardRef } from 'react'
 import { FormInputProps } from './FormInput.types'
-import { Input, InputContainer, InputWrapper, Label } from './FormInput.styles'
+import {
+  ErrorMessage,
+  Input,
+  InputContainer,
+  InputWrapper,
+  Label,
+} from './FormInput.styles'
 
 const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
   ({ label, id, error, icon, ...props }, ref) => {
@@ -11,7 +17,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
           <Input id={id} ref={ref} {...props} />
           {icon && <>{icon}</>}
         </InputContainer>
-        {error && <span>{error}</span>}
+        {error && <ErrorMessage>{error}</ErrorMessage>}
       </InputWrapper>
     )
   },

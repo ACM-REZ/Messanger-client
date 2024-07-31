@@ -22,5 +22,5 @@ export const Title = styled.h1`
   font-size: 36px;
   font-weight: 600;
 
-  color: ${({ theme }) => theme.color};
+  color: ${({ theme }) => theme.text};
 `

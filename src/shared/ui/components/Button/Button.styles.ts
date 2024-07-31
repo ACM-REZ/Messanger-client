@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.color};
+  background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.background};
   border: none;
   padding: 10px 20px;
@@ -21,7 +21,7 @@ export const Button = styled.button`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.background};
+    background-color: ${({ theme }) => theme.primaryHover};
     color: ${({ theme }) => theme.color};
   }
 `

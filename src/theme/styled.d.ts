@@ -3,6 +3,7 @@ import 'styled-components'
 interface ThemeColors {
   background: string
   primary: string
+  primaryHover: string
   secondary: string
   text: string
   textLight: string

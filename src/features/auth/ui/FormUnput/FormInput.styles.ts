@@ -10,6 +10,8 @@ export const InputWrapper = styled.div`
 export const Label = styled.label`
   font-size: 16px;
   max-width: fit-content;
+
+  color: ${({ theme }) => theme.text};
 `
 
 export const InputContainer = styled.div`
@@ -42,16 +44,18 @@ export const Input = styled.input`
 
   transition: border-bottom 0.3s;
 
+  color: ${({ theme }) => theme.text};
+
   &::placeholder {
-    color: #e3e3e3;
+    color: ${({ theme }) => theme.text};
   }
 
   &:focus {
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
 
   &:focus + svg path {
-    fill: #007bff;
+    fill: ${({ theme }) => theme.primary};
   }
 `
 
@@ -60,7 +64,8 @@ export const IconWrapper = styled.div`
 `
 
 export const ErrorMessage = styled.span`
-  color: red;
+  text-align: left;
+  color: ${({ theme }) => theme.error};
   font-size: 0.875rem;
   margin-top: 0.25rem;
 `
