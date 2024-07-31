@@ -4,7 +4,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import FormInput from '../../../../shared/ui/components/Form/FormInput/FormInput'
 import loginSchema from '../../schemas/loginSchema'
 
-import { Form } from './LoginForm.styles'
 import { Button } from '../../../../shared/ui/components/Button/Button.styles'
 import { IFormInputs } from './LoginForm.types'
 import { UserIcon, PasswordIcon } from '../../../../shared/ui/icons'
@@ -12,6 +11,7 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { login } from '../../../../entities/user/model/userSlice'
 import RegistrationLink from '../../../../shared/ui/components/Link/RegistrationLink'
+import Form from '../../../../shared/ui/components/Form/Form'
 
 const LoginForm: React.FC = () => {
   const dispatch = useDispatch()
