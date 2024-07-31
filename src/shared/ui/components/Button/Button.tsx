@@ -1,10 +1,6 @@
 import React from 'react'
 import { Button } from './Button.styles'
-
-type ThemeButtonProps = {
-  onClick: () => void
-  children: React.ReactNode
-}
+import { ThemeButtonProps } from './Button.types'
 
 const ThemeButton: React.FC<ThemeButtonProps> = ({ onClick, children }) => {
   return <Button onClick={onClick}>{children}</Button>

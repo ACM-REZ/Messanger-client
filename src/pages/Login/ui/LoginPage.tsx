@@ -1,13 +1,12 @@
 import React from 'react'
 import LoginForm from '../../../features/auth/ui/LoginForm/LoginForm'
-import { Title, Wrapper } from './LoginPage.styles'
+import FormWrapper from '../../../shared/ui/components/Form/FormWrapper/FormWrapper'
 
 const LoginPage: React.FC = () => {
   return (
-    <Wrapper>
-      <Title>Вход</Title>
+    <FormWrapper title="Вход">
       <LoginForm />
-    </Wrapper>
+    </FormWrapper>
   )
 }
 

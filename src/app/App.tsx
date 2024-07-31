@@ -10,6 +10,7 @@ import LoginPage from '../pages/Login/ui/LoginPage'
 import HomePage from '../pages/Home/ui/HomePage'
 import PrivateRoute from '../features/auth/model/PrivateRoute'
 import Layout from './layout/Layout'
+import RegistrationPage from '../pages/Registration/ui/RegistrationPage'
 
 const App: React.FC = () => {
   const theme = useSelector((state: RootState) => state.theme.theme)
@@ -22,6 +23,7 @@ const App: React.FC = () => {
       <Router>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/registration" element={<RegistrationPage />} />
           <Route element={<PrivateRoute />}>
             <Route element={<Layout />}>
               <Route path="/" element={<HomePage />} />
