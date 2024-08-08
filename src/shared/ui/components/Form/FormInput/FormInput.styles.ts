@@ -17,13 +17,39 @@ export const Label = styled.label`
 export const InputContainer = styled.div`
   width: 100%;
   position: relative;
+`
+
+export const IconContainer = styled.div`
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 16px;
+  height: 16px;
 
   svg {
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+  }
 
+  path {
+    transition: all 0.3s;
+  }
+`
+
+export const EyeContainer = styled.button`
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 16px;
+  height: 16px;
+
+  cursor: pointer;
+
+  svg {
     width: 16px;
     height: 16px;
   }
@@ -45,6 +71,7 @@ export const Input = styled.input`
   transition: border-bottom 0.3s;
 
   color: ${({ theme }) => theme.text};
+  background-color: transparent;
 
   &::placeholder {
     color: ${({ theme }) => theme.text};
@@ -54,7 +81,7 @@ export const Input = styled.input`
     border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
 
-  &:focus + svg path {
+  &:focus + div svg path {
     fill: ${({ theme }) => theme.primary};
   }
 `

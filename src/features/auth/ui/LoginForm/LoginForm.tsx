@@ -5,7 +5,7 @@ import FormInput from '../../../../shared/ui/components/Form/FormInput/FormInput
 import loginSchema from '../../schemas/loginSchema'
 
 import { Button } from '../../../../shared/ui/components/Button/Button.styles'
-import { IFormInputs } from './LoginForm.types'
+import { UserLoginForm } from './LoginForm.types'
 import { UserIcon, PasswordIcon } from '../../../../shared/ui/icons'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -21,11 +21,11 @@ const LoginForm: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<IFormInputs>({
+  } = useForm<UserLoginForm>({
     resolver: yupResolver(loginSchema),
   })
 
-  const onSubmit: SubmitHandler<IFormInputs> = (user) => {
+  const onSubmit: SubmitHandler<UserLoginForm> = (user) => {
     console.log(user)
 
     dispatch(login(user))
@@ -38,6 +38,7 @@ const LoginForm: React.FC = () => {
         label="Имя пользователя"
         placeholder="Введите логин"
         id="username"
+        type="text"
         {...register('username')}
         error={errors.username?.message}
         icon={<UserIcon />}
